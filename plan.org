@@ -1,0 +1,35 @@
+Plan for pytest talk 2017-11.
+
+* General
+  - Time: 40 minutes, evening
+  - Resources: Projector, whiteboard, computer.
+  - Audience: Intermediate software developers in a research context. May not
+    know why testing is useful. Python proficient.
+* Abstract
+  Testing is an essential software engineering practice to ensure that
+  simulation or application software remains functional throughout development.
+  This talk motivates the use of pytest as a testing framework for Python
+  software, and demonstrates features of pytest that satisfy common testing
+  requirements.
+
+  Specifically, test parameterisation is demonstrated which, throught the use
+  of fixtures, allows a test developer to elegantle test aspects of their
+  software under many conditions (without code duplication?).
+
+  Mocking is also demonstrated, which changes the behaviour of areas of code,
+  so that the functionality of other areas can be tested in isolation.
+
+  Reducing the execution time of tests is also demonstrated by distributing
+  groups of tests between local and remote worker processes.
+
+  After a summary, the presentation concludes with a brief mention of other
+  useful testing tools and methodologies.
+* Structure
+** [7m] Introduction and why test?
+** [5m] What should tests do? Outlining requirements.
+** [5m] About pytest and basic demo. Other frameworks in brief.
+** [5m] Parameterising tests (fixtures).
+** [6m] Parallel tests.
+** [7m] Testing in isolation (mocking)
+   Example with logging?
+** [5m] Summary and wrap-up.
