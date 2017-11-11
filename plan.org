@@ -8,6 +8,7 @@ Plan for pytest talk 2017-11.
 * Abstract
   Testing is an essential software engineering practice to ensure that
   simulation or application software remains functional throughout development.
+
   This talk motivates the use of pytest as a testing framework for Python
   software, and demonstrates features of pytest that satisfy common testing
   requirements.
@@ -33,3 +34,8 @@ Plan for pytest talk 2017-11.
 ** [7m] Testing in isolation (mocking)
    Example with logging?
 ** [5m] Summary and wrap-up.
+* Other tools
+** [7m] Test setup and teardown
+** [6m] Git bisect
+** [5m] Coverage
+** [5m] Loading tests from files
