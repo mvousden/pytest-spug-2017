@@ -5,26 +5,28 @@ Plan for pytest talk 2017-11.
   - Resources: Projector, whiteboard, computer.
   - Audience: Intermediate software developers in a research context. May not
     know why testing is useful. Python proficient.
+* Title
+  Python testing with pytest: motivation, demonstration, and practices.
 * Abstract
-  Testing is an essential software engineering practice to ensure that
-  simulation or application software remains functional throughout development.
-
-  This talk motivates the use of pytest as a testing framework for Python
-  software, and demonstrates features of pytest that satisfy common testing
-  requirements.
-
-  Specifically, test parameterisation is demonstrated which, throught the use
-  of fixtures, allows a test developer to elegantle test aspects of their
-  software under many conditions (without code duplication?).
-
-  Mocking is also demonstrated, which changes the behaviour of areas of code,
-  so that the functionality of other areas can be tested in isolation.
-
-  Reducing the execution time of tests is also demonstrated by distributing
-  groups of tests between local and remote worker processes.
-
-  After a summary, the presentation concludes with a brief mention of other
-  useful testing tools and methodologies.
+  Testing software ensures that simulation or application software remains
+  functional throughout development, and proves that software operates a
+  specific way when deployed or frozen.
+  In software engineering, testing is a necessary practice for reliable
+  software.
+  This talk motivates the use of pytest to test Python code by outlining common
+  requirements for a testing framework, and demonstrates the use of pytest.
+  One common requirement from a testing framework is that a developer must be
+  able to test aspects of their software under many conditions without
+  duplicating code, using test parameterisation.
+  Another requirement is the need to test certain areas of code in isolation to
+  more easily identify the cause of problems; this can be achieved by mocking
+  areas that are tested elsewhere.
+  Testing all code in every possible condition is ideal, but time must be
+  budgeted to run the most essential tests.
+  This limitation motivates the design of a fast-running test suite; this talk
+  demonstrates running tests in parallel and across machines.
+  After a summary, this talk concludes with a brief mention of other useful
+  testing tools.
 * Structure
 ** [7m] Introduction and why test?
 ** [5m] What should tests do? Outlining requirements.
