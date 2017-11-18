@@ -9,6 +9,7 @@
                             % the header.
 \usepackage{parskip}        % Removes indentations from paragraphs.
 \usepackage{wrapfig}        % Figures beside text.
+\usepackage{xcolor}         % Coloured text.
 
 % Setting dimensions
 \usepackage[papersize={12.8cm, 9.6cm},
@@ -48,7 +49,7 @@
 % \rhead{\body{\scriptsize \thepage/\pageref{LastPage}}}
 
 % Customise itemize environments.
-\setitemize{itemsep=12pt, label=--, leftmargin=*}
+\setitemize{itemsep=16pt, label=--, leftmargin=*}
 
 % Configuring frameboxes for images.
 \setlength{\fboxsep}{0cm}
@@ -72,7 +73,8 @@ Mark Vousden\\[5ex]
 \end{center}
 \clearpage
 
-\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%% Introduction and why test? %%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{center}
 \begin{tabular}{lr}
   \fbox{\includegraphics[width=0.32\textwidth]{mark.png}} &
@@ -82,16 +84,35 @@ Mark Vousden\\[5ex]
 \end{center}
 \clearpage
 
-\slidetitle{Novel Contributions}
+\slidetitle{Why write tests?}
 \begin{itemize}
-\item Developed and publicised a platform for reproducible\\and accessible
-    micromagnetic simulation.
-\item Investigated the effect of easy-plane anisotropy on skyrmions.
-\item Investigated the effect of polycrystallinity on magnetic\\behaviour in
-    helimagnets.
-\item Combined aforementioned studies to model a real\\polycrystalline
-    helimagnet with easy-plane anisotropy.
+\item Shows your software is fit for purpose
+\item Do changes compromise your software?
+\item Confidence!
+\item Others can develop without risk
 \end{itemize}
+\clearpage
+
+\slidetitle{Why {\color{red}not} write tests?}
+\begin{itemize}[itemsep=-2.9pt]
+\item Shows your software is fit for purpose
+{\color{red} \item[\label={}] \hfill ``But I know it works!''}
+\item Do changes compromise your software?
+{\color{red} \item[\label={}] \hfill Takes time and skill}
+\item Confidence!
+{\color{red} \item[\label={}] \hfill False confidence!}
+% Tests done badly are worse than no tests at all
+\item Others can develop without risk
+{\color{red} \item[\label={}] \hfill Increased codebase (more to maintain)}
+\end{itemize}
+\clearpage
+
+\thispagestyle{empty}
+\topskip0pt
+\vspace*{\fill}
+\LARGE{\centerline{Tests done badly are}
+\centerline{worse than no tests at all.}}
+\vspace*{\fill}
 \clearpage
 
 \end{document}
