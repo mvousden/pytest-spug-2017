@@ -1,14 +1,12 @@
 \documentclass[12pt]{article}
 
 \usepackage{background}     % Defining text colours.
-\usepackage{caption}        % Caption without "Figure" at the start of it.
 \usepackage{enumitem}       % Better enumeration
 \usepackage{fancyhdr}       % Headers and footers.
 \usepackage[none]{hyphenat} % No hyphenation
 \usepackage{lastpage}       % To determine the last page of the document for
                             % the header.
 \usepackage{parskip}        % Removes indentations from paragraphs.
-\usepackage{wrapfig}        % Figures beside text.
 \usepackage{xcolor}         % Coloured text.
 
 % Setting dimensions
@@ -103,7 +101,6 @@ Mark Vousden\\[5ex]
 {\color{red} \item[\label={}] \hfill Takes time and skill}
 \item Confidence!
 {\color{red} \item[\label={}] \hfill False confidence!}
-% Tests done badly are worse than no tests at all
 \item Others can develop without risk
 {\color{red} \item[\label={}] \hfill Increased codebase (more to maintain)}
 \end{itemize}
@@ -112,7 +109,7 @@ Mark Vousden\\[5ex]
 \thispagestyle{plain}
 \vspace*{-\topskip}
 \vspace*{\fill}
-\LARGE{\centerline{Tests done badly are}
+{\LARGE\centerline{Tests done badly are}
 \centerline{worse than no tests at all.}}
 \vspace*{\fill}
 \vspace*{\geometrytop}
@@ -120,4 +117,13 @@ Mark Vousden\\[5ex]
 
 %%%%%%%%%%%%%%%% What should tests do? Outlining requirements %%%%%%%%%%%%%%%%
 
+\slidetitle{Desirable features of testing frameworks}
+\begin{itemize}
+\item Shows the software is working or not.
+\item Failure diagnosis.
+\item Test the software under many conditions (parameterisation).
+% (without duplicating code)
+\item Test areas of software in isolation (mocking).
+\item Must run fast!
+\end{itemize}
 \end{document}
