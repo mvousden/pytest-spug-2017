@@ -12,8 +12,10 @@
 \usepackage{xcolor}         % Coloured text.
 
 % Setting dimensions
+\newlength{\geometrytop}
+\setlength{\geometrytop}{25pt}
 \usepackage[papersize={12.8cm, 9.6cm},
-            top=25pt,
+            top=\geometrytop,
             headheight=15pt,
             headsep=5pt,
             hmargin=0.5cm,
@@ -62,11 +64,11 @@
 % Begin
 \thispagestyle{plain}
 \begin{center}
+\topskip0pt
+\vspace*{\fill}
 \LARGE{Python testing with pytest:\\[1ex]}
 \Large{motivation, demonstration, and practices}
 \normalsize
-\vfill
-\large{Presented to Southampton Python Users Group.}
 \vfill
 Mark Vousden\\[5ex]
 \vfill
@@ -107,12 +109,15 @@ Mark Vousden\\[5ex]
 \end{itemize}
 \clearpage
 
-\thispagestyle{empty}
-\topskip0pt
+\thispagestyle{plain}
+\vspace*{-\topskip}
 \vspace*{\fill}
 \LARGE{\centerline{Tests done badly are}
 \centerline{worse than no tests at all.}}
 \vspace*{\fill}
+\vspace*{\geometrytop}
 \clearpage
+
+%%%%%%%%%%%%%%%% What should tests do? Outlining requirements %%%%%%%%%%%%%%%%
 
 \end{document}
