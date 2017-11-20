@@ -2,3 +2,5 @@
 *.log
 *.pdf
 *~
+.cache
+__pycache__
