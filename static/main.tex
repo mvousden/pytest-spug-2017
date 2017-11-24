@@ -120,13 +120,74 @@ Mark Vousden\\[5ex]
 
 %%%%%%%%%%%%%%%% What should tests do? Outlining requirements %%%%%%%%%%%%%%%%
 
-\slidetitle{Desirable features of testing frameworks}
+\slidetitle{Desirable features of a test suite}
 \begin{itemize}
-\item Shows the software is working or not.
-\item Failure diagnosis.
+\item Shows the software is working or not (and failure diagnosis).
 \item Test the software under many conditions (parameterisation).
 % (without duplicating code)
 \item Test areas of software in isolation (mocking).
 \item Must run fast!
+\item Many more...
 \end{itemize}
+\clearpage
+
+\thispagestyle{plain}
+\vspace*{-\topskip}
+\vspace*{\fill}
+{\Huge\centerline{\textbf{Scenario I}}~\newline
+\centerline{A really complicated}
+\centerline{simulation library}}
+\vspace*{\fill}
+\vspace*{\geometrytop}
+\clearpage
+
+\slidetitle{Lessons from Scenario I}
+\begin{itemize}
+\item You can test your code without Pytest.
+\item Pytest reports failed tests.
+\item Pytest searches for tests for you.
+\item Pytest has informative output.
+\end{itemize}
+\clearpage
+
+\thispagestyle{plain}
+\vspace*{-\topskip}
+\vspace*{\fill}
+{\Huge\centerline{\textbf{Scenario II}}~\newline
+\centerline{A data-processing library}}
+\vspace*{\fill}
+\vspace*{\geometrytop}
+\clearpage
+
+\slidetitle{Lessons from Scenario II}
+\begin{itemize}
+\item Automatic test collection is useful.
+\item Pytest shows us details about why assertions fail.
+\item We need to be able to parameterise tests (without duplicating code).
+\end{itemize}
+\clearpage
+
+\thispagestyle{plain}
+\vspace*{-\topskip}
+\vspace*{\fill}
+{\Huge\centerline{\textbf{Scenario III}}~\newline
+\centerline{A data-processing library}
+\centerline{with parameterised tests}}
+\vspace*{\fill}
+\vspace*{\geometrytop}
+\clearpage
+
+\slidetitle{Lessons from Scenario III}
+\begin{itemize}
+\item Fixtures (decorated with \verb|@pytest.fixture()|) are blocks of
+    functionality that allow tests to be written in a modular way.
+\item Fixtures are run when the test is run, and their output is passed to the
+    test.
+\item Fixtures can be used to parameterise tests, reducing code
+    duplication. Each test is run individually of the others.
+
+\end{itemize}
+\clearpage
+
+
 \end{document}
