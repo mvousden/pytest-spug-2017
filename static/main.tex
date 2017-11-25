@@ -125,8 +125,8 @@ Mark Vousden\\[5ex]
 \item Shows the software is working or not (and failure diagnosis).
 \item Test the software under many conditions (parameterisation).
 % (without duplicating code)
-\item Test areas of software in isolation (mocking).
 \item Must run fast!
+\item Test areas of software in isolation (mocking).
 \item Many more...
 \end{itemize}
 \clearpage
@@ -185,8 +185,39 @@ Mark Vousden\\[5ex]
     test.
 \item Fixtures can be used to parameterise tests, reducing code
     duplication. Each test is run individually of the others.
-
 \end{itemize}
+\clearpage
+
+\thispagestyle{plain}
+\vspace*{-\topskip}
+\vspace*{\fill}
+{\Huge\centerline{\textbf{Scenario IV}}~\newline
+\centerline{Sharing the load of}
+\centerline{parameterised tests}
+\centerline{(parallelisation)}}
+\vspace*{\fill}
+\vspace*{\geometrytop}
+\clearpage
+
+\slidetitle{Lessons from Scenario IV}
+\begin{itemize}
+\item The \verb|pytest-xdist| pytest plugin allows tests to be distributed to
+    other compute resources (typically local cores).
+\item pytest can guess the number of cores you need (be careful).
+\item Alternatively, make your software run in parallel, and use this to test
+    serial regions.
+\item More? <!>
+\end{itemize}
+\clearpage
+
+\thispagestyle{plain}
+\vspace*{-\topskip}
+\vspace*{\fill}
+{\Huge\centerline{\textbf{Scenario V}}~\newline
+\centerline{Testing software in isolation}
+\centerline{(mocking)}}
+\vspace*{\fill}
+\vspace*{\geometrytop}
 \clearpage
 
 
