@@ -1,8 +1,7 @@
 \documentclass[12pt]{article}
 
-\usepackage{background}     % Defining text colours.
 \usepackage{enumitem}       % Better enumeration
-\usepackage{fancyhdr}       % Headers and footers.
+\usepackage{graphicx}       % Images
 \usepackage[none]{hyphenat} % No hyphenation
 \usepackage{multirow}       % Final table
 \usepackage{parskip}        % Removes indentations from paragraphs.
@@ -22,13 +21,6 @@
             right=0.7cm,
             footskip=0cm]{geometry}
 
-% Applying background.
-\backgroundsetup{angle=0,
-                 opacity=1,
-                 position={21.6cm, -9.6cm},
-                 scale=0.3,
-                 contents={\includegraphics{background.png}}}
-
 % Set the font.
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand*\rmdefault{ppl}
@@ -41,11 +33,6 @@
 \newcommand{\body}[1]{{\color{body}#1}}
 \newcommand{\embolden}[1]{{\bf\color{bold}#1}}
 \newcommand{\slidetitle}[1]{~\\[-0.5ex]{\Large\bf{\color{bold}#1}}\\}
-
-% Configuring header and footer, and removing horizontal header rule.
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
 
 % Customise itemize environments.
 \setitemize{itemsep=16pt, label=--, leftmargin=*}
