@@ -146,7 +146,7 @@ Mark Vousden\\[5ex]
 \end{itemize}
 \clearpage
 
-\slidetitle{Interlude: How did pytest do that?}
+\slidetitle{How did pytest do that?}
 \begin{itemize}
 \item Collection:
 \begin{itemize}
@@ -231,7 +231,18 @@ Mark Vousden\\[5ex]
 \vspace*{\geometrytop}
 \clearpage
 
-\slidetitle{Interlude: Test Types}
+\slidetitle{Test Types}
+\vfill
+\centerline{Isolation is not always appropriate.}
+\vfill
+\begin{tabular}{ccc}
+\includegraphics[width=0.3\textwidth]{unit.png} &
+\includegraphics[width=0.3\textwidth]{integ.png} &
+\includegraphics[width=0.3\textwidth]{sys.png} \\
+Unit tests & Integration tests & System tests
+\end{tabular}
+\vfill
+\vfill
 \clearpage
 
 \slidetitle{Summary of Scenario V}
@@ -246,6 +257,16 @@ Mark Vousden\\[5ex]
 \clearpage
 
 \slidetitle{Other useful tools}
+\begin{itemize}[itemsep=0cm]
+\item \verb|pytest-timeout| to catch timeouts.
+\item \verb|pdb| (or \verb|ipdb|) is a useful ``debug'' tool.
+\item \verb|--pdb| flag starts python debugger on collection error.
+\item \verb|pytest-cov| for code coverage.
+\item Version control and continuous integration.
+\item Git bisect
+\item \verb|--junitxml| dumps a machine-readable XML of results.
+\item \verb|conftest.py| to configure collection behaviour.
+\end{itemize}
 \clearpage
 
 \slidetitle{Summary}
@@ -262,9 +283,10 @@ Mark Vousden\\[5ex]
 \includegraphics[width=1.5cm]{github.png}
 \end{wrapfigure}
 \begin{itemize}[itemsep=0pt]
-\item[] Presentation: mvousden/pytest-SPUG-2017
+\item[] Presentation: mvousden/pytest-spug-2017
 \item[] Code examples: mvousden/pytest-lets-explore
 \end{itemize}
+% Add email and video link <!>
 \clearpage
 
 \end{document}
