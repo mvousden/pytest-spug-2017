@@ -145,6 +145,21 @@ Mark Vousden\\[5ex]
 \end{itemize}
 \clearpage
 
+\slidetitle{Interlude: How did pytest do that?}
+\begin{itemize}
+\item Collection:
+\begin{itemize}
+\item Imports the test file.
+\item Scans for functions and classes with \verb|test| in their handle.
+\end{itemize}
+\item Execution:
+\begin{itemize}
+\item Calls dependencies/fixtures (see scenario II).
+\item Literally calls the test functions.
+\end{itemize}
+\end{itemize}
+\clearpage
+
 \thispagestyle{plain}
 \vspace*{-\topskip}
 \vspace*{\fill}
@@ -180,6 +195,7 @@ Mark Vousden\\[5ex]
     test.
 \item Fixtures can be used to parameterise tests, reducing code
     duplication. Each test is run individually of the others.
+\item (Also, \verb|@pytest.mark.parameterize| can be used for this.)
 \end{itemize}
 \clearpage
 
@@ -214,5 +230,24 @@ Mark Vousden\\[5ex]
 \vspace*{\geometrytop}
 \clearpage
 
+\slidetitle{Interlude: Test Types}
+\clearpage
+
+\slidetitle{Lessons from Scenario V}
+\begin{itemize}
+\item Mocking (we used \verb|pytest-mock|) allows you to live-swap one imported
+    function with another.
+\item We can test individual behaviours of complicated functions.
+\item Unit tests, integration tests, and system tests all serve different
+    purposes; mocking helps with these.
+\item (Beware of parallel file input/output!)
+\end{itemize}
+\clearpage
+
+\slidetitle{Other useful tools}
+\clearpage
+
+\slidetitle{Closing}
+\clearpage
 
 \end{document}
