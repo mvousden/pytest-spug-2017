@@ -5,6 +5,7 @@
 \usepackage{fancyhdr}       % Headers and footers.
 \usepackage[none]{hyphenat} % No hyphenation
 \usepackage{parskip}        % Removes indentations from paragraphs.
+\usepackage{wrapfig}
 \usepackage{xcolor}         % Coloured text.
 
 % Setting dimensions
@@ -247,7 +248,23 @@ Mark Vousden\\[5ex]
 \slidetitle{Other useful tools}
 \clearpage
 
+\slidetitle{Summary}
+\begin{itemize}
+\item Testing software is often essential.
+\item Writing tests is hard. Bad tests are harmful!
+\item There are many approaches, but pytest is good.
+\item The testing rabbit hole is deep.
+\end{itemize}
+\clearpage
+
 \slidetitle{Closing}
+\begin{wrapfigure}{l}{1.5cm}
+\includegraphics[width=1.5cm]{github.png}
+\end{wrapfigure}
+\begin{itemize}[itemsep=0pt]
+\item[] Presentation: mvousden/pytest-SPUG-2017
+\item[] Code examples: mvousden/pytest-lets-explore
+\end{itemize}
 \clearpage
 
 \end{document}
