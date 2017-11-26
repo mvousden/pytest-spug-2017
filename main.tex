@@ -4,8 +4,8 @@
 \usepackage{enumitem}       % Better enumeration
 \usepackage{fancyhdr}       % Headers and footers.
 \usepackage[none]{hyphenat} % No hyphenation
+\usepackage{multirow}       % Final table
 \usepackage{parskip}        % Removes indentations from paragraphs.
-\usepackage{wrapfig}
 \usepackage{xcolor}         % Coloured text.
 
 % Setting dimensions
@@ -256,13 +256,14 @@ Unit tests & Integration tests & System tests
 \end{itemize}
 \clearpage
 
-\slidetitle{Other useful tools}
+\slidetitle{Other useful testing-related tools}
 \begin{itemize}[itemsep=0cm]
+\item Other testing frameworks like \verb|unittest| or \verb|nose|.
 \item \verb|pytest-timeout| to catch timeouts.
-\item \verb|pdb| (or \verb|ipdb|) is a useful ``debug'' tool.
-\item \verb|--pdb| flag starts python debugger on collection error.
+\item \verb|pdb| (or \verb|ipdb|) is a debugger that can be used during
+    tests. \verb|--pdb| flag starts python debugger on collection error.
 \item \verb|pytest-cov| for code coverage.
-\item Version control and continuous integration.
+\item Version control and continuous integration (CI).
 \item Git bisect
 \item \verb|--junitxml| dumps a machine-readable XML of results.
 \item \verb|conftest.py| to configure collection behaviour.
@@ -278,15 +279,20 @@ Unit tests & Integration tests & System tests
 \end{itemize}
 \clearpage
 
-\slidetitle{Closing}
-\begin{wrapfigure}{l}{1.5cm}
-\includegraphics[width=1.5cm]{github.png}
-\end{wrapfigure}
-\begin{itemize}[itemsep=0pt]
-\item[] Presentation: mvousden/pytest-spug-2017
-\item[] Code examples: mvousden/pytest-lets-explore
-\end{itemize}
-% Add email and video link <!>
+\slidetitle{Closing}\\[0.5cm]
+Get pytest at www.pytest.org (use pip or conda!)
+\vfill
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ll}
+\multirow{2}{*}{\includegraphics[width=1cm]{github.png}} &
+Presentation: mvousden/pytest-spug-2017 \\
+& Code examples: mvousden/pytest-lets-explore \\
+\multirow{2}{*}{\includegraphics[width=1cm]{email.png}} &
+\multirow{2}{*}{mlvousden@gmail.com} \\ \\
+\multirow{2}{*}{\includegraphics[width=1cm]{youtube.png}} &
+\multirow{2}{*}{Link coming soon!} \\ \\
+\end{tabular}
+\vfill
 \clearpage
 
 \end{document}
