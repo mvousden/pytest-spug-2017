@@ -4,8 +4,6 @@
 \usepackage{enumitem}       % Better enumeration
 \usepackage{fancyhdr}       % Headers and footers.
 \usepackage[none]{hyphenat} % No hyphenation
-\usepackage{lastpage}       % To determine the last page of the document for
-                            % the header.
 \usepackage{parskip}        % Removes indentations from paragraphs.
 \usepackage{xcolor}         % Coloured text.
 
@@ -47,9 +45,6 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-
-% I don't want slide numbers at the top.
-% \rhead{\body{\scriptsize \thepage/\pageref{LastPage}}}
 
 % Customise itemize environments.
 \setitemize{itemsep=16pt, label=--, leftmargin=*}
@@ -99,13 +94,13 @@ Mark Vousden\\[5ex]
 \slidetitle{Why {\color{red}not} write tests?}
 \begin{itemize}[itemsep=-2.9pt]
 \item Shows your software is fit for purpose
-{\color{red} \item[\label={}] \hfill ``But I know it works!''}
+{\color{red} \item[] \hfill ``But I know it works!''}
 \item Do changes compromise your software?
-{\color{red} \item[\label={}] \hfill Takes time and skill}
+{\color{red} \item[] \hfill Takes time and skill}
 \item Confidence!
-{\color{red} \item[\label={}] \hfill False confidence!}
+{\color{red} \item[] \hfill False confidence!}
 \item Others can develop without risk
-{\color{red} \item[\label={}] \hfill Increased codebase (more to maintain)}
+{\color{red} \item[] \hfill Increased codebase (more to maintain)}
 \end{itemize}
 \clearpage
 
